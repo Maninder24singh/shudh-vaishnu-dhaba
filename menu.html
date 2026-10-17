@@ -215,6 +215,9 @@ document.getElementById('search').addEventListener('input', e => {
   document.getElementById('empty').style.display = any ? 'none' : 'block';
 });
 </script>
+<style id="mobile-fix">
+@media (max-width:700px){ .wm-mark{display:none;} .wm-tile{z-index:300;opacity:.55;background-size:480px 212px;} }
+</style>
 <style id="wm-tile">.wm-tile{position:fixed;inset:0;z-index:99998;pointer-events:none;user-select:none;-webkit-user-select:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='680' height='300'%3E%3Ctext x='340' y='150' text-anchor='middle' transform='rotate%28-25 230 130%29' font-family='Arial,sans-serif' font-size='17' font-weight='700' letter-spacing='1.5' fill='white' fill-opacity='0.16' stroke='black' stroke-opacity='0.12' stroke-width='0.6'%3ESAMPLE DESIGN BY MANINDER SINGH - NOT FOR USE%3C/text%3E%3C/svg%3E");background-repeat:repeat;}@media print{.wm-tile{display:block}}</style>
 <div class="wm-tile" aria-hidden="true"></div>
 <style id="wm-style">.wm-mark{position:fixed;left:12px;bottom:10px;z-index:99999;font:600 12px/1 system-ui,Arial,sans-serif;letter-spacing:.06em;color:rgba(255,255,255,.6);text-shadow:0 0 4px rgba(0,0,0,.7),0 0 2px rgba(0,0,0,.7);pointer-events:none;user-select:none;-webkit-user-select:none;}</style>
