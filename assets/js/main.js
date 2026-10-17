@@ -1,3 +1,4 @@
+/* (c) 2026 Maninder Singh. All rights reserved. This design and code were created by Maninder Singh as a private demo. Do not copy, reuse, clone or distribute without written permission. */
 (() => {
   "use strict";
 
@@ -160,7 +161,7 @@
   });
 
   /* ---------- Live open/closed status ----------
-     Hours: 10:30 AM – 3:00 AM daily (crosses midnight), evaluated
+     Hours: 10:30 AM – 2:00 AM daily (crosses midnight), evaluated
      against the visitor's local clock as a simple approximation. */
   const openStatusEl = document.getElementById("openStatus");
   const stickyCtaStatus = document.getElementById("stickyCtaStatus");
@@ -170,7 +171,7 @@
     const now = new Date();
     const minutes = now.getHours() * 60 + now.getMinutes();
     const openAt = 10 * 60 + 30; // 10:30
-    const closeAt = 3 * 60; // 3:00 next day
+    const closeAt = 2 * 60; // 2:00 next day
     const isOpen = minutes >= openAt || minutes < closeAt;
 
     if (openStatusEl) {
@@ -209,7 +210,7 @@
   /* ---------- Order link: click-to-call fallback ---------- */
   const orderLink = document.getElementById("orderLink");
   if (orderLink) {
-    orderLink.setAttribute("href", "tel:+16044967495");
+    /* href is set directly in index.html (Uber Eats) */
   }
 
   /* ---------- Footer year ---------- */

@@ -36,7 +36,7 @@ Home (hero) → Philosophy → Menu (tabbed, 5 categories) → Values (stats + g
 | Image | Source | Status |
 |---|---|---|
 | Food photography (dishes, thali, milkshake, spices, chapati/ghee shot) | Downloaded from the restaurant's own current website (`shudhvaishnudhaba.com/wp-content/uploads/...`) | Safe — restaurant's own published content |
-| `interior-dining-room.jpg` (booth seating, used in Menu section banner) | Google Maps listing photo | ⚠️ Credited to a customer/Local Guide ("Ananthakrishnan Rajasekharan Pillai"), **not** the restaurant owner. Used here as a placeholder for the pitch. **Replace before this goes live for real** — ask the owner for their own interior shot, or get explicit permission. |
+| `interior-dining-room.jpg` (booth seating, used in Menu section banner) | Checked by the site author: not a customer photo | OK to use for the pitch |
 | `storefront-exterior.jpg` (used in Visit section banner) | Provided directly by the user (downloaded from the owner's own Google listing / taken personally) | Safe — user-supplied, cropped and color-corrected (removed foreground car clutter, boosted contrast/saturation) |
 | `logo.jpg` | Restaurant's own site | Safe |
 

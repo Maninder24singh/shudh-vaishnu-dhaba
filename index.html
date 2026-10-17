@@ -1,6 +1,11 @@
 <!doctype html>
 <html lang="en">
 <head>
+<!-- (c) 2026 Maninder Singh. Original design and code. Sample for the owner of Shudh Vaishnu Dhaba only. Copying or reuse without written permission is not allowed. -->
+
+<!-- (c) 2026 Maninder Singh. All rights reserved. This design and code were created by Maninder Singh as a private demo. Do not copy, reuse, clone or distribute without written permission. -->
+<meta name="author" content="Maninder Singh">
+<meta name="copyright" content="(c) 2026 Maninder Singh">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Shudh Vaishnu Dhaba — Pure Vegetarian, Made With Desi Ghee | Surrey, BC</title>
@@ -9,7 +14,106 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,900;1,9..144,500;1,9..144,600&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
-</head>
+
+<style id="ghee-scroll-style">
+/* The hero itself is the scroll-controlled video: tall section, sticky screen-sized stage, scroll sets the video time. */
+.hero.ghee-scroll{display:block;height:320vh;min-height:0;overflow:visible;align-items:stretch;background:#0e0b08;--p:0;}
+.hero.ghee-scroll .ghee-sticky{position:sticky;top:0;height:100vh;height:100svh;overflow:hidden;display:flex;align-items:flex-end;}
+.ghee-sticky video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 60%;}
+/* Lighter than the old photo overlay so the video stays visible, but the words stay readable. */
+.hero.ghee-scroll .hero-overlay{
+  background:
+    linear-gradient(0deg, rgba(14,11,8,.72) 0%, rgba(14,11,8,.2) 45%, rgba(14,11,8,.28) 100%),
+    linear-gradient(100deg, rgba(14,11,8,.55) 0%, rgba(14,11,8,.05) 55%);
+}
+@media (max-width:700px){
+  .hero.ghee-scroll{height:280vh;}
+  .ghee-sticky video{object-position:50% 50%;}
+}
+@media (prefers-reduced-motion:reduce){
+  .hero.ghee-scroll{height:auto;min-height:100svh;}
+  .hero.ghee-scroll .ghee-sticky{position:relative;}
+}
+</style><style id="glass-style">
+/* Glass look: see-through nav, glass buttons, frosted cards, soft color glows behind them. */
+
+/* ---- Nav bar ---- */
+.site-header{background:linear-gradient(180deg,rgba(14,11,8,.4),rgba(14,11,8,0));}
+.site-header.scrolled{
+  background:rgba(28,20,12,.30);
+  -webkit-backdrop-filter:blur(22px) saturate(1.6);backdrop-filter:blur(22px) saturate(1.6);
+  border-bottom-color:rgba(255,255,255,.16);
+  box-shadow:0 10px 30px -18px rgba(0,0,0,.7),inset 0 -1px 0 rgba(255,255,255,.05);
+}
+.main-nav a,.header-phone,.brand-name{text-shadow:0 1px 8px rgba(0,0,0,.45);}
+.mobile-nav{
+  background:rgba(14,11,8,.72);
+  -webkit-backdrop-filter:blur(26px) saturate(1.5);backdrop-filter:blur(26px) saturate(1.5);
+}
+
+/* ---- Buttons ---- */
+.btn{transition:transform .35s var(--ease),background .3s,border-color .3s,color .3s,box-shadow .3s;}
+.btn-primary{
+  background:linear-gradient(135deg,rgba(247,211,120,.95),rgba(209,161,58,.80));
+  border:1px solid rgba(255,255,255,.38);
+  -webkit-backdrop-filter:blur(12px) saturate(1.4);backdrop-filter:blur(12px) saturate(1.4);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.5),0 10px 26px -10px rgba(209,161,58,.65);
+}
+.btn-primary:hover{
+  background:linear-gradient(135deg,rgba(255,224,140,1),rgba(227,180,70,.92));
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.6),0 14px 30px -10px rgba(243,199,101,.75);
+}
+.btn-outline{
+  background:rgba(255,255,255,.09);
+  border:1px solid rgba(255,255,255,.3);
+  -webkit-backdrop-filter:blur(12px) saturate(1.4);backdrop-filter:blur(12px) saturate(1.4);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.22),0 8px 22px -12px rgba(0,0,0,.6);
+}
+.btn-outline:hover{background:rgba(255,255,255,.17);border-color:rgba(243,199,101,.75);}
+.tab-btn:not(.active){
+  background:rgba(255,255,255,.07);border-color:rgba(255,255,255,.2);
+  -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);
+}
+
+/* ---- Cards ---- */
+.dish-feature,.value-card,.quote-card{
+  background:linear-gradient(145deg,rgba(255,255,255,.10),rgba(255,255,255,.03));
+  border:1px solid rgba(255,255,255,.15);
+  -webkit-backdrop-filter:blur(18px) saturate(1.4);backdrop-filter:blur(18px) saturate(1.4);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.16),0 24px 44px -26px rgba(0,0,0,.75);
+}
+.value-card:hover{border-color:rgba(243,199,101,.7);}
+.quote-card:hover{border-color:rgba(255,255,255,.3);}
+
+/* ---- Soft glows behind the card sections (glass needs something to blur) ---- */
+.menu-section{background:
+  radial-gradient(42rem 26rem at 88% 12%,rgba(209,161,58,.20),transparent 65%),
+  radial-gradient(38rem 26rem at 8% 85%,rgba(193,74,36,.16),transparent 65%),
+  var(--bg-alt);}
+.values{background:
+  radial-gradient(42rem 26rem at 12% 30%,rgba(209,161,58,.20),transparent 65%),
+  radial-gradient(40rem 26rem at 90% 78%,rgba(226,97,47,.16),transparent 65%),
+  var(--bg);}
+.community{background:
+  radial-gradient(42rem 26rem at 85% 20%,rgba(226,97,47,.16),transparent 65%),
+  radial-gradient(40rem 26rem at 10% 80%,rgba(209,161,58,.18),transparent 65%),
+  var(--bg);}
+
+/* Browsers without blur support: make the glass a little more solid so text stays readable. */
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
+  .site-header.scrolled{background:rgba(24,17,10,.85);}
+  .dish-feature,.value-card,.quote-card{background:rgba(40,30,20,.85);}
+}
+</style>
+<style id="hover-fx">
+@media (hover:hover){
+  .btn,.tab-btn,.nav-toggle,.lightbox-close,.lightbox-nav,.gallery-item{cursor:pointer;transition:transform .3s ease,background .3s,border-color .3s,color .3s,box-shadow .3s;}
+  .btn:hover,.tab-btn:hover,.nav-toggle:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(243,199,101,.35);}
+  .btn:active,.tab-btn:active,.nav-toggle:active{transform:translateY(0);}
+  .lightbox-close:hover,.lightbox-nav:hover{box-shadow:0 0 0 2px rgba(243,199,101,.7),0 8px 22px rgba(243,199,101,.35);background:rgba(255,255,255,.2);}
+  .gallery-item:hover{box-shadow:0 10px 28px rgba(243,199,101,.35);}
+}
+</style></head>
 <body>
 
 <div class="grain" aria-hidden="true"></div>
@@ -25,7 +129,7 @@
 
     <nav class="main-nav" id="mainNav" aria-label="Primary">
       <a href="#philosophy" data-nav>Philosophy</a>
-      <a href="#menu" data-nav>Menu</a>
+      <a href="menu.html">Menu</a>
       <a href="#values" data-nav>Values</a>
       <a href="#gallery" data-nav>Gallery</a>
       <a href="#catering" data-nav>Catering</a>
@@ -34,7 +138,7 @@
 
     <div class="header-actions">
       <a href="tel:+16044967495" class="header-phone">604&#8209;496&#8209;7495</a>
-      <a href="#visit" class="btn btn-primary btn-sm">Order Now</a>
+      <a href="https://www.ubereats.com/ca/store/shudh-vaishnu-dhaba/mDxi59yCU-KWQm2ECL5nJw?diningMode=DELIVERY&amp;ps=1&amp;sc=SEARCH_SUGGESTION" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Order Now</a>
       <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileNav">
         <span></span><span></span><span></span>
       </button>
@@ -45,7 +149,7 @@
 <div class="mobile-nav" id="mobileNav">
   <nav aria-label="Mobile">
     <a href="#philosophy" data-nav>Philosophy</a>
-    <a href="#menu" data-nav>Menu</a>
+    <a href="menu.html">Menu</a>
     <a href="#values" data-nav>Values</a>
     <a href="#gallery" data-nav>Gallery</a>
     <a href="#catering" data-nav>Catering</a>
@@ -53,18 +157,19 @@
   </nav>
   <div class="mobile-nav-footer">
     <a href="tel:+16044967495" class="btn btn-outline">Call 604-496-7495</a>
-    <a href="#visit" class="btn btn-primary">Order Now</a>
+    <a href="https://www.ubereats.com/ca/store/shudh-vaishnu-dhaba/mDxi59yCU-KWQm2ECL5nJw?diningMode=DELIVERY&amp;ps=1&amp;sc=SEARCH_SUGGESTION" target="_blank" rel="noopener" class="btn btn-primary">Order Now</a>
   </div>
 </div>
 
 <main id="main">
 
   <!-- HERO -->
-  <section class="hero" id="home">
-    <div class="hero-bg" style="background-image:url('assets/img/ghee-on-chapati.png')"></div>
+  <section class="hero ghee-scroll" id="home">
+    <div class="ghee-sticky">
+      <video id="gheeVideo" muted playsinline preload="auto" poster="assets/video/ghee-poster.jpg" tabindex="-1" aria-hidden="true"></video>
     <div class="hero-overlay"></div>
     <div class="hero-content container">
-      <p class="eyebrow reveal">Surrey, BC &middot; Open Daily Until 3AM</p>
+      <p class="eyebrow reveal">Surrey, BC &middot; Open Daily Until 2AM</p>
       <h1 class="hero-title">
         <span class="line reveal">Pure Vegetarian.</span>
         <span class="line reveal" style="--d:.12s">Loaded With</span>
@@ -72,14 +177,15 @@
       </h1>
       <p class="hero-sub reveal" style="--d:.36s">Street-style Punjabi flavour, made from scratch every single day — ready for pickup, delivery, or your next big event.</p>
       <div class="hero-actions reveal" style="--d:.48s">
-        <a href="#visit" class="btn btn-primary btn-lg">Order Now</a>
-        <a href="#menu" class="btn btn-outline btn-lg">View Menu</a>
+        <a href="https://www.ubereats.com/ca/store/shudh-vaishnu-dhaba/mDxi59yCU-KWQm2ECL5nJw?diningMode=DELIVERY&amp;ps=1&amp;sc=SEARCH_SUGGESTION" target="_blank" rel="noopener" class="btn btn-primary btn-lg">Order Now</a>
+        <a href="menu.html" class="btn btn-outline btn-lg">View Menu</a>
       </div>
     </div>
     <a href="#philosophy" class="hero-scroll" aria-label="Scroll to content">
       <span>Scroll</span>
       <div class="scroll-line"><i></i></div>
     </a>
+    </div>
   </section>
 
   <!-- MARQUEE -->
@@ -332,7 +438,7 @@
         </figure>
         <figure class="quote-card reveal" style="--d:.2s">
           <div class="stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <blockquote>&ldquo;Open till 3AM and still tastes like it just came off the tawa. Our go-to after a late shift.&rdquo;</blockquote>
+          <blockquote>&ldquo;Open till 2AM and still tastes like it just came off the tawa. Our go-to after a late shift.&rdquo;</blockquote>
           <figcaption>&mdash; Late-night regular</figcaption>
         </figure>
       </div>
@@ -373,24 +479,24 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>
           <div>
             <strong id="openStatus">Checking hours&hellip;</strong>
-            <span>10:30 AM &ndash; 3:00 AM, daily</span>
+            <span>10:30 AM &ndash; 2:00 AM, daily</span>
           </div>
         </div>
 
         <div class="visit-actions">
-          <a href="#" id="orderLink" class="btn btn-primary">Order Delivery</a>
+          <a href="https://www.ubereats.com/ca/store/shudh-vaishnu-dhaba/mDxi59yCU-KWQm2ECL5nJw?diningMode=DELIVERY&amp;ps=1&amp;sc=SEARCH_SUGGESTION" target="_blank" rel="noopener" id="orderLink" class="btn btn-primary">Order Delivery</a>
           <a href="https://www.google.com/maps?q=10209+King+George+Blvd,+Surrey,+BC+V3T+2W6" target="_blank" rel="noopener" class="btn btn-outline">Get Directions</a>
         </div>
 
         <table class="hours-table" id="hoursTable">
           <tbody>
-            <tr data-day="0"><th>Sunday</th><td>10:30 AM &ndash; 3:00 AM</td></tr>
-            <tr data-day="1"><th>Monday</th><td>10:30 AM &ndash; 3:00 AM</td></tr>
-            <tr data-day="2"><th>Tuesday</th><td>10:30 AM &ndash; 3:00 AM</td></tr>
-            <tr data-day="3"><th>Wednesday</th><td>10:30 AM &ndash; 3:00 AM</td></tr>
-            <tr data-day="4"><th>Thursday</th><td>10:30 AM &ndash; 3:00 AM</td></tr>
-            <tr data-day="5"><th>Friday</th><td>10:30 AM &ndash; 3:00 AM</td></tr>
-            <tr data-day="6"><th>Saturday</th><td>10:30 AM &ndash; 3:00 AM</td></tr>
+            <tr data-day="0"><th>Sunday</th><td>10:30 AM &ndash; 2:00 AM</td></tr>
+            <tr data-day="1"><th>Monday</th><td>10:30 AM &ndash; 2:00 AM</td></tr>
+            <tr data-day="2"><th>Tuesday</th><td>10:30 AM &ndash; 2:00 AM</td></tr>
+            <tr data-day="3"><th>Wednesday</th><td>10:30 AM &ndash; 2:00 AM</td></tr>
+            <tr data-day="4"><th>Thursday</th><td>10:30 AM &ndash; 2:00 AM</td></tr>
+            <tr data-day="5"><th>Friday</th><td>10:30 AM &ndash; 2:00 AM</td></tr>
+            <tr data-day="6"><th>Saturday</th><td>10:30 AM &ndash; 2:00 AM</td></tr>
           </tbody>
         </table>
       </div>
@@ -403,7 +509,7 @@
 
 </main>
 
-<a class="sticky-cta" id="stickyCta" href="#visit">
+<a class="sticky-cta" id="stickyCta" href="https://www.ubereats.com/ca/store/shudh-vaishnu-dhaba/mDxi59yCU-KWQm2ECL5nJw?diningMode=DELIVERY&amp;ps=1&amp;sc=SEARCH_SUGGESTION" target="_blank" rel="noopener">
   <span class="sticky-cta-main">Order Now</span>
   <span class="sticky-cta-sub" id="stickyCtaStatus">&nbsp;</span>
 </a>
@@ -416,7 +522,7 @@
     </div>
     <nav class="footer-nav" aria-label="Footer">
       <a href="#philosophy" data-nav>Philosophy</a>
-      <a href="#menu" data-nav>Menu</a>
+      <a href="menu.html">Menu</a>
       <a href="#values" data-nav>Values</a>
       <a href="#gallery" data-nav>Gallery</a>
       <a href="#catering" data-nav>Catering</a>
@@ -426,7 +532,7 @@
       <a href="tel:+16044967495">604-496-7495</a>
       <span>10209 King George Blvd, Surrey, BC V3T 2W6</span>
       <div class="footer-social">
-        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+        <a href="https://www.instagram.com/shudhvaishnudhaba?stkn=MW9uZDRxa2ZlOHoyeA==" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
         <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M15 3h-2a5 5 0 0 0-5 5v2H6v4h2v7h4v-7h3l1-4h-4V8a1 1 0 0 1 1-1h3Z"/></svg></a>
       </div>
     </div>
@@ -434,6 +540,7 @@
   <div class="footer-bottom container">
     <span>&copy; <span id="year"></span> Shudh Vaishnu Dhaba. All rights reserved.</span>
     <span>Surrey, British Columbia</span>
+    <span>Sample website design by Maninder Singh. Not for copying or reuse.</span>
   </div>
 </footer>
 
@@ -446,5 +553,69 @@
 </div>
 
 <script src="assets/js/main.js"></script>
+<script id="ghee-scroll-script">
+(function(){
+  var sec = document.getElementById('home');
+  var v = document.getElementById('gheeVideo');
+  if (!sec || !v) return;
+
+  // Phones get the smaller file so the page loads faster.
+  var small = window.matchMedia('(max-width:700px)').matches;
+  v.src = small ? 'assets/video/ghee-pour-mobile.mp4' : 'assets/video/ghee-pour.mp4';
+
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var dur = 0, target = 0, shown = 0, ready = false, ticking = false;
+
+  // 0 when the section reaches the top of the screen, 1 when it is about to leave.
+  function progress(){
+    var total = sec.offsetHeight - window.innerHeight;
+    if (total <= 0) return 0;
+    return Math.min(1, Math.max(0, -sec.getBoundingClientRect().top / total));
+  }
+
+  function queue(){
+    if (!ticking){ ticking = true; requestAnimationFrame(tick); }
+  }
+
+  function onScroll(){
+    target = progress();
+    sec.style.setProperty('--p', target.toFixed(3));
+    queue();
+  }
+
+  // Glide toward the scroll position so the video feels smooth, not jumpy.
+  function tick(){
+    ticking = false;
+    if (!ready) return;
+    if (v.seeking){ queue(); return; }
+    shown += (target - shown) * 0.2;
+    if (Math.abs(target - shown) < 0.0005) shown = target;
+    var t = Math.min(shown * dur, dur - 0.05);
+    if (Math.abs(v.currentTime - t) > 0.01) v.currentTime = t;
+    if (shown !== target) queue();
+  }
+
+  v.addEventListener('loadedmetadata', function(){
+    dur = v.duration || 10;
+    ready = true;
+    if (reduce){ v.currentTime = dur * 0.7; return; }
+    // iPhone Safari only draws seeked frames after the video has started once.
+    var pr = v.play();
+    if (pr && pr.then) pr.then(function(){ v.pause(); }).catch(function(){});
+    onScroll();
+  });
+
+  if (!reduce){
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll);
+  }
+})();
+</script>
+
+<style id="wm-tile">.wm-tile{position:fixed;inset:0;z-index:99998;pointer-events:none;user-select:none;-webkit-user-select:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='680' height='300'%3E%3Ctext x='340' y='150' text-anchor='middle' transform='rotate%28-25 230 130%29' font-family='Arial,sans-serif' font-size='17' font-weight='700' letter-spacing='1.5' fill='white' fill-opacity='0.16' stroke='black' stroke-opacity='0.12' stroke-width='0.6'%3ESAMPLE DESIGN BY MANINDER SINGH - NOT FOR USE%3C/text%3E%3C/svg%3E");background-repeat:repeat;}@media print{.wm-tile{display:block}}</style>
+<div class="wm-tile" aria-hidden="true"></div>
+<style id="wm-style">.wm-mark{position:fixed;left:12px;bottom:10px;z-index:99999;font:600 12px/1 system-ui,Arial,sans-serif;letter-spacing:.06em;color:rgba(255,255,255,.6);text-shadow:0 0 4px rgba(0,0,0,.7),0 0 2px rgba(0,0,0,.7);pointer-events:none;user-select:none;-webkit-user-select:none;}</style>
+<div class="wm-mark" aria-hidden="true">Designed by Maninder Singh</div>
+<script>console.log('%c(c) 2026 Maninder Singh - design and code. Not for copying or reuse.','color:#f3c765;font-weight:bold;font-size:13px');</script>
 </body>
 </html>
